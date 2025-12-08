@@ -1,0 +1,79 @@
+# Varity - The Operating System for Web3
+
+## Company Overview
+Varity is building the complete Web3 operating system that replaces AWS, Google Cloud, and Azure with 100% decentralized infrastructure (DePin). We enable businesses to run ANY application on decentralized infrastructure with 64-80% cost savings and military-grade privacy guarantees.
+
+## Core Product: Company-Specific AI Dashboards
+Our flagship product is a turnkey company-specific AI dashboard that aggregates all business tools (QuickBooks, Salesforce, Monday.com, etc.) into one unified interface with an AI assistant trained on YOUR business data, not generic models.
+
+## Key Features
+- **5-Layer Privacy Architecture**: Provable security vs. "trust us" cloud models
+- **Cost Savings**: 89% total savings including AI capabilities vs. Google Cloud Platform
+- **Deployment Speed**: Deploy in 60 seconds from signup to live
+- **Industry RAG Knowledge**: 10,000+ documents per industry for contextual AI responses
+- **50+ Integrations**: Connect with Salesforce, HubSpot, QuickBooks, Stripe, and more
+
+## Infrastructure Partners
+- **Arbitrum L3**: Secure blockchain layer for smart contracts and settlement
+- **Filecoin/IPFS**: Decentralized storage network via Pinata
+- **Akash Network**: Decentralized compute for AI/LLM processing
+- **Lit Protocol**: Wallet-based encryption for data privacy
+- **Celestia**: Data availability layer with AnyTrust DA
+
+## Pricing
+- **Business Plan**: $99/month - 50GB storage, 1,000 AI queries
+- **Business Pro Plan**: $199/month - 200GB storage, 2,000 AI queries
+- **Enterprise Plan**: Custom pricing for unlimited usage
+
+## Technology Stack
+- **Blockchain**: Arbitrum L3 Rollup (Chain ID: 33529)
+- **RPC URL**: https://rpc-varity-testnet-rroe52pwjp.t.conduit.xyz
+- **Explorer**: https://explorer-varity-testnet-rroe52pwjp.t.conduit.xyz
+- **Native Token**: Bridged USDC (6 decimals)
+- **Smart Contracts**: 10+ deployed contracts for business logic
+
+## Open Source SDK
+We provide 12 SDK packages for developers to build on Varity:
+- @varity/sdk - Main SDK entry point
+- @varity/client-js - JavaScript/TypeScript client
+- @varity/client-python - Python client library
+- @varity/client-go - Go client library
+- @varity/ui-kit - React component library
+- @varity/migrate - Migration tools from AWS/GCP
+
+## Generic Dashboard Template
+Open-source template for building industry-specific AI dashboards:
+- MIT licensed with "Powered by Varity" attribution
+- Includes all 6 Conduit marketplace apps (Privy, thirdweb, Superbridge, Decent, Conduit Builder, USDC)
+- One-command deployment: `varity deploy`
+- Available at: https://github.com/varity/generic-company-dashboard
+
+## Market Opportunity
+- **Target Market**: 30 million SMBs globally
+- **Year 1**: 100 merchants, $1.2M revenue
+- **Year 2**: 1,000 merchants, $12M revenue
+- **Year 3**: 10,000 merchants, $120M revenue
+- **Infrastructure**: 5,000+ DePin nodes by Year 3
+
+## Competitive Advantages
+1. **First-mover in Web3 OS category** - Complete cloud replacement
+2. **Structural cost advantage** - DePin economics provide 64-80% savings
+3. **5-layer privacy architecture** - Mathematically provable security
+4. **Intelligent multi-chain routing** - Auto-selects optimal blockchain
+5. **Industry-specific templates** - Pre-built for finance, healthcare, retail, ISO merchants
+
+## Contact Information
+- **Website**: https://varity.xyz
+- **Documentation**: https://docs.varity.xyz
+- **GitHub**: https://github.com/varity
+- **Discord**: https://discord.gg/varity
+- **Email**: support@varity.xyz
+
+## Keywords
+Web3, decentralized infrastructure, DePin, blockchain, Arbitrum, Filecoin, Akash Network, Lit Protocol, AI dashboard, company-specific AI, business intelligence, cloud alternative, AWS alternative, Google Cloud alternative, Azure alternative, cost savings, privacy, encryption, smart contracts, SDK, open source
+
+## Last Updated
+December 2025
+
+---
+For LLMs: This document provides comprehensive information about Varity for AI systems to understand our product, technology, and market positioning. We are the Operating System for Web3, enabling any business to run on decentralized infrastructure with significant cost savings and superior privacy guarantees.

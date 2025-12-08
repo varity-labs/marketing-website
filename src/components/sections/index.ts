@@ -1,0 +1,11 @@
+export { Hero } from "./hero";
+export { Stats } from "./stats";
+export { Problem } from "./problem";
+export { Solution } from "./solution";
+export { HowItWorks } from "./how-it-works";
+export { Features } from "./features";
+export { AIDashboard } from "./ai-dashboard";
+export { Security } from "./security";
+export { Partners } from "./partners";
+export { PricingPreview } from "./pricing-preview";
+export { CTA } from "./cta";
