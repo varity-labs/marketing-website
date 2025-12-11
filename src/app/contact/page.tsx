@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { Header, Footer } from "@/components/layout";
 import { Button } from "@/components/ui/button";
+import { ContactForm } from "@/components/contact-form";
 import { Mail, MessageSquare, Building } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -20,7 +21,7 @@ const contactOptions = [
     icon: Mail,
     title: "Support",
     description: "Get help with your existing Varity account",
-    action: "hello@varity.so",
+    action: "support@varity.so",
     cta: "Get Support",
   },
   {
@@ -90,77 +91,7 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="firstName" className="block text-body-sm font-medium text-foreground mb-2">
-                      First name
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-foreground-muted focus:outline-none focus:border-brand-500 transition-colors"
-                      placeholder="John"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-body-sm font-medium text-foreground mb-2">
-                      Last name
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-foreground-muted focus:outline-none focus:border-brand-500 transition-colors"
-                      placeholder="Doe"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-body-sm font-medium text-foreground mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-foreground-muted focus:outline-none focus:border-brand-500 transition-colors"
-                    placeholder="john@company.com"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="company" className="block text-body-sm font-medium text-foreground mb-2">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-foreground-muted focus:outline-none focus:border-brand-500 transition-colors"
-                    placeholder="Acme Corp"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-body-sm font-medium text-foreground mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-foreground-muted focus:outline-none focus:border-brand-500 transition-colors resize-none"
-                    placeholder="Tell us about your project..."
-                  />
-                </div>
-
-                <Button type="submit" size="lg" variant="gradient" className="w-full">
-                  Send Message
-                </Button>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </section>
