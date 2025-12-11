@@ -1,14 +1,11 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === 'production';
-
 const nextConfig: NextConfig = {
-  output: isProd ? 'export' : undefined,
+  output: 'export',        // Required for static export
+  trailingSlash: true,     // Critical for IPFS compatibility
   images: {
-    unoptimized: true,
-  },
-  assetPrefix: isProd ? './' : undefined,
-  trailingSlash: true,
+    unoptimized: true      // Required since no server
+  }
 };
 
 export default nextConfig;
