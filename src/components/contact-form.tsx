@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Loader2, AlertCircle } from "lucide-react";
+import { trackEvent } from "@/components/analytics";
 
 // Get your free access key at https://web3forms.com
 const WEB3FORMS_ACCESS_KEY = "322fcdfe-779a-4cab-a76a-11285466709c";
@@ -52,6 +53,8 @@ export function ContactForm() {
       if (result.success) {
         setIsSubmitted(true);
         setFormData({ firstName: "", lastName: "", email: "", company: "", message: "" });
+        // Track successful form submission for analytics
+        trackEvent("contact_form_submit", { success: 1 });
       } else {
         setError(result.message || "Something went wrong. Please try again.");
       }

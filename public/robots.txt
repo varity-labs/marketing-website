@@ -1,0 +1,13 @@
+# Varity - The Operating System for Web3
+# https://varity.so
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://varity.so/sitemap.xml
+
+# Block common bot paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
