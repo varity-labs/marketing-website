@@ -2,11 +2,15 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Loader2 } from "lucide-react";
+import { CheckCircle, Loader2, AlertCircle } from "lucide-react";
+
+// Get your free access key at https://web3forms.com
+const WEB3FORMS_ACCESS_KEY = "322fcdfe-779a-4cab-a76a-11285466709c";
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -17,29 +21,45 @@ export function ContactForm() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    setError(null);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
 
-    // Create mailto link with form data
-    const subject = encodeURIComponent(`Contact from ${formData.firstName} ${formData.lastName} - ${formData.company}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.firstName} ${formData.lastName}\n` +
-      `Email: ${formData.email}\n` +
-      `Company: ${formData.company}\n\n` +
-      `Message:\n${formData.message}`
-    );
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          company: formData.company,
+          message: formData.message,
+          from_name: "Varity Contact Form",
+          subject: `New contact from ${formData.firstName} ${formData.lastName}${formData.company ? ` (${formData.company})` : ""}`,
+        }),
+      });
 
-    // Open mailto link
-    window.location.href = `mailto:hello@varity.so?subject=${subject}&body=${body}`;
+      const result = await response.json();
 
-    // Show success state after a short delay
-    setTimeout(() => {
+      if (result.success) {
+        setIsSubmitted(true);
+        setFormData({ firstName: "", lastName: "", email: "", company: "", message: "" });
+      } else {
+        setError(result.message || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setError("Failed to send message. Please try again or email us directly at hello@varity.so");
+    } finally {
       setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 500);
+    }
   };
 
   if (isSubmitted) {
@@ -49,17 +69,14 @@ export function ContactForm() {
           <CheckCircle className="h-12 w-12" />
         </div>
         <h3 className="text-heading-lg font-semibold text-foreground mb-2">
-          Email client opened!
+          Message sent successfully!
         </h3>
         <p className="text-body-md text-foreground-secondary mb-6">
-          Please send the email from your email client to complete your message.
+          Thanks for reaching out. We&apos;ll get back to you within 24 hours.
         </p>
         <Button
           variant="outline"
-          onClick={() => {
-            setIsSubmitted(false);
-            setFormData({ firstName: "", lastName: "", email: "", company: "", message: "" });
-          }}
+          onClick={() => setIsSubmitted(false)}
         >
           Send Another Message
         </Button>
@@ -69,10 +86,17 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
+      {error && (
+        <div className="flex items-center gap-3 p-4 rounded-lg bg-red-500/10 border border-red-500/20 text-red-400">
+          <AlertCircle className="h-5 w-5 flex-shrink-0" />
+          <p className="text-body-sm">{error}</p>
+        </div>
+      )}
+
       <div className="grid md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="firstName" className="block text-body-sm font-medium text-foreground mb-2">
-            First name
+            First name <span className="text-red-400">*</span>
           </label>
           <input
             type="text"
@@ -87,7 +111,7 @@ export function ContactForm() {
         </div>
         <div>
           <label htmlFor="lastName" className="block text-body-sm font-medium text-foreground mb-2">
-            Last name
+            Last name <span className="text-red-400">*</span>
           </label>
           <input
             type="text"
@@ -104,7 +128,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="email" className="block text-body-sm font-medium text-foreground mb-2">
-          Email
+          Email <span className="text-red-400">*</span>
         </label>
         <input
           type="email"
@@ -135,7 +159,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="message" className="block text-body-sm font-medium text-foreground mb-2">
-          Message
+          Message <span className="text-red-400">*</span>
         </label>
         <textarea
           id="message"
@@ -153,12 +177,17 @@ export function ContactForm() {
         {isSubmitting ? (
           <>
             <Loader2 className="h-5 w-5 mr-2 animate-spin" />
-            Opening email...
+            Sending...
           </>
         ) : (
           "Send Message"
         )}
       </Button>
+
+      <p className="text-center text-body-sm text-foreground-muted">
+        By submitting this form, you agree to our{" "}
+        <a href="/privacy" className="text-brand-400 hover:underline">Privacy Policy</a>.
+      </p>
     </form>
   );
 }
