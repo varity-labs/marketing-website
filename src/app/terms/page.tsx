@@ -411,7 +411,7 @@ export default function TermsPage() {
                   14.1 Informal Resolution
                 </h3>
                 <p className="text-body-md text-foreground-secondary mb-4">
-                  Before filing a formal dispute, you agree to attempt to resolve the dispute informally by contacting legal@varity.io. We will attempt to resolve the dispute within 60 days.
+                  Before filing a formal dispute, you agree to attempt to resolve the dispute informally by contacting hello@varity.so. We will attempt to resolve the dispute within 60 days.
                 </p>
 
                 <h3 className="text-heading-md font-semibold text-foreground mt-8 mb-3">
@@ -456,7 +456,7 @@ export default function TermsPage() {
                   16.1 Termination by You
                 </h3>
                 <p className="text-body-md text-foreground-secondary mb-4">
-                  You may terminate your account at any time by contacting support@varity.io or through your account settings. Monthly subscriptions will terminate at the end of the current billing period. Annual subscriptions are non-refundable but will terminate at the end of the annual period.
+                  You may terminate your account at any time by contacting hello@varity.so or through your account settings. Monthly subscriptions will terminate at the end of the current billing period. Annual subscriptions are non-refundable but will terminate at the end of the annual period.
                 </p>
 
                 <h3 className="text-heading-md font-semibold text-foreground mt-8 mb-3">
@@ -555,8 +555,8 @@ export default function TermsPage() {
                   If you have questions about these Terms, please contact us:
                 </p>
                 <ul className="list-none text-body-md text-foreground-secondary space-y-2 mb-4">
-                  <li><strong>Legal Inquiries:</strong> legal@varity.io</li>
-                  <li><strong>General Support:</strong> support@varity.io</li>
+                  <li><strong>Legal Inquiries:</strong> hello@varity.so</li>
+                  <li><strong>General Support:</strong> hello@varity.so</li>
                   <li><strong>Address:</strong> Varity Inc., [Address to be added]</li>
                 </ul>
               </section>

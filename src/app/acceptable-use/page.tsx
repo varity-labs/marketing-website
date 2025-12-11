@@ -336,7 +336,7 @@ export default function AcceptableUsePage() {
                   10.3 Appeals
                 </h3>
                 <p className="text-body-md text-foreground-secondary mb-4">
-                  If you believe your account was suspended or terminated in error, you may appeal by contacting abuse@varity.io within 30 days. Include your account details and an explanation of why you believe the action was taken in error.
+                  If you believe your account was suspended or terminated in error, you may appeal by contacting hello@varity.so within 30 days. Include your account details and an explanation of why you believe the action was taken in error.
                 </p>
               </section>
 
@@ -349,9 +349,9 @@ export default function AcceptableUsePage() {
                   If you become aware of any violation of this AUP, please report it to us:
                 </p>
                 <ul className="list-none text-body-md text-foreground-secondary space-y-2 mb-4">
-                  <li><strong>Email:</strong> abuse@varity.io</li>
-                  <li><strong>Security Issues:</strong> security@varity.io</li>
-                  <li><strong>DMCA/Copyright:</strong> dmca@varity.io</li>
+                  <li><strong>Email:</strong> hello@varity.so</li>
+                  <li><strong>Security Issues:</strong> hello@varity.so</li>
+                  <li><strong>DMCA/Copyright:</strong> hello@varity.so</li>
                 </ul>
                 <p className="text-body-md text-foreground-secondary mb-4">
                   When reporting, please include:
@@ -408,10 +408,10 @@ export default function AcceptableUsePage() {
                   For questions about this Acceptable Use Policy, please contact us:
                 </p>
                 <ul className="list-none text-body-md text-foreground-secondary space-y-2 mb-4">
-                  <li><strong>General Inquiries:</strong> legal@varity.io</li>
-                  <li><strong>Abuse Reports:</strong> abuse@varity.io</li>
-                  <li><strong>Security Issues:</strong> security@varity.io</li>
-                  <li><strong>DMCA/Copyright:</strong> dmca@varity.io</li>
+                  <li><strong>General Inquiries:</strong> hello@varity.so</li>
+                  <li><strong>Abuse Reports:</strong> hello@varity.so</li>
+                  <li><strong>Security Issues:</strong> hello@varity.so</li>
+                  <li><strong>DMCA/Copyright:</strong> hello@varity.so</li>
                 </ul>
               </section>
 

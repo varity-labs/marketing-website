@@ -191,7 +191,7 @@ export default function PrivacyPage() {
                   <li><strong>Withdrawal of Consent:</strong> Withdraw consent where processing is based on consent</li>
                 </ul>
                 <p className="text-body-md text-foreground-secondary mb-4">
-                  To exercise these rights, contact us at privacy@varity.io. We will respond within 30 days.
+                  To exercise these rights, contact us at hello@varity.so. We will respond within 30 days.
                 </p>
               </section>
 
@@ -232,7 +232,7 @@ export default function PrivacyPage() {
                   11. Children&apos;s Privacy
                 </h2>
                 <p className="text-body-md text-foreground-secondary mb-4">
-                  Our services are not intended for individuals under 18 years of age. We do not knowingly collect personal information from children. If you believe we have collected information from a child, please contact us immediately at privacy@varity.io.
+                  Our services are not intended for individuals under 18 years of age. We do not knowingly collect personal information from children. If you believe we have collected information from a child, please contact us immediately at hello@varity.so.
                 </p>
               </section>
 
@@ -273,9 +273,9 @@ export default function PrivacyPage() {
                   If you have questions about this Privacy Policy or our privacy practices, please contact us:
                 </p>
                 <ul className="list-none text-body-md text-foreground-secondary space-y-2 mb-4">
-                  <li><strong>Email:</strong> privacy@varity.io</li>
+                  <li><strong>Email:</strong> hello@varity.so</li>
                   <li><strong>Address:</strong> Varity Inc., [Address to be added]</li>
-                  <li><strong>Data Protection Officer:</strong> dpo@varity.io</li>
+                  <li><strong>Data Protection Officer:</strong> hello@varity.so</li>
                 </ul>
               </section>
 

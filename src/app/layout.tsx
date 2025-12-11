@@ -11,7 +11,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://varity.io"),
+  metadataBase: new URL("https://varity.so"),
   title: {
     default: "Varity - The Operating System for Web3",
     template: "%s | Varity",
@@ -45,14 +45,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://varity.io",
+    url: "https://varity.so",
     siteName: "Varity",
     title: "Varity - The Operating System for Web3",
     description:
       "Build on 100% decentralized infrastructure with 89% total savings including AI. Company-specific AI dashboards, blockchain settlement, and military-grade privacy.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/logo/varity-logo-color.svg",
         width: 1200,
         height: 630,
         alt: "Varity - The Operating System for Web3",
@@ -64,15 +64,15 @@ export const metadata: Metadata = {
     title: "Varity - The Operating System for Web3",
     description:
       "Build on 100% decentralized infrastructure with 89% total savings including AI.",
-    images: ["/og-image.png"],
+    images: ["/logo/varity-logo-color.svg"],
     creator: "@varietyxyz",
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
       { url: "/icon.svg", type: "image/svg+xml" },
     ],
-    apple: "/apple-touch-icon.png",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
   },
   manifest: "/manifest.json",
 };
