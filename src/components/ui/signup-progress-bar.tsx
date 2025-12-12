@@ -150,20 +150,20 @@ export function SignupProgressBar({
     }
 
     return (
-      <div className={`flex items-center gap-3 ${className}`}>
-        <div className="flex-1 max-w-24 h-1.5 bg-background-secondary/50 rounded-full overflow-hidden">
+      <div className={`flex items-center gap-4 ${className}`}>
+        <div className="flex-1 max-w-32 h-2.5 bg-background-secondary/50 rounded-full overflow-hidden">
           <div
             className={`h-full ${getProgressColor()} transition-all duration-500 ease-out`}
             style={{ width: `${percentage}%` }}
           />
         </div>
-        <span className={`text-xs whitespace-nowrap ${isUrgent ? 'text-red-400 font-medium' : 'text-foreground-secondary'}`}>
+        <span className={`text-sm font-medium whitespace-nowrap ${isUrgent ? 'text-red-400' : 'text-foreground-secondary'}`}>
           {spotsRemaining} spots left
         </span>
         <Link
           href={ctaHref}
           onClick={handleCtaClick}
-          className={`px-3 py-1 text-xs font-semibold rounded-full whitespace-nowrap transition-all ${
+          className={`px-4 py-1.5 text-sm font-semibold rounded-full whitespace-nowrap transition-all ${
             isCritical
               ? 'bg-red-500 text-white animate-pulse'
               : 'bg-gradient-to-r from-brand-500 to-electric-400 text-slate-950 hover:opacity-90'
