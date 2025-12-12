@@ -8,6 +8,7 @@ import { Logo } from "@/components/ui/logo";
 import { Button } from "@/components/ui/button";
 import { ChainSelector } from "@/components/ui/chain-selector";
 import { ComingSoonLink } from "@/components/ui/coming-soon-link";
+import { SignupProgressBar } from "@/components/ui/signup-progress-bar";
 import { cn } from "@/lib/utils";
 import { trackEvent } from "@/components/analytics";
 
@@ -73,6 +74,13 @@ export function Header() {
 
             {/* Right Side - CTAs */}
             <div className="flex items-center gap-3">
+              {/* Signup Progress Bar - Shows when scrolled on larger screens */}
+              {isScrolled && (
+                <div className="hidden lg:block">
+                  <SignupProgressBar variant="minimal" />
+                </div>
+              )}
+
               <div className="hidden sm:block">
                 <ChainSelector />
               </div>
@@ -86,15 +94,18 @@ export function Header() {
                     Contact
                   </Link>
                 </Button>
-                <Button size="sm" className="gap-1" asChild>
-                  <Link
-                    href="/dashboard"
-                    onClick={() => trackEvent("nav_cta_click", { location: "header_desktop", button: "get_started" })}
-                  >
-                    Get Started
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </Button>
+                {/* Only show Get Started button when NOT scrolled (progress bar shows when scrolled) */}
+                {!isScrolled && (
+                  <Button size="sm" className="gap-1" asChild>
+                    <Link
+                      href="/dashboard"
+                      onClick={() => trackEvent("nav_cta_click", { location: "header_desktop", button: "get_started" })}
+                    >
+                      Get Started
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </Button>
+                )}
               </div>
 
               {/* Mobile Menu Button */}
@@ -145,6 +156,11 @@ export function Header() {
 
                 <div className="pt-4 border-t border-border">
                   <ChainSelector className="w-full justify-center" />
+                </div>
+
+                {/* Early Adopter Progress Bar in Mobile Menu */}
+                <div className="pt-4">
+                  <SignupProgressBar variant="compact" className="w-full" />
                 </div>
 
                 <div className="flex flex-col gap-3 pt-4">
