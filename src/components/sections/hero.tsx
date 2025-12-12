@@ -7,6 +7,7 @@ import { ArrowRight, Play, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ChainSelector } from "@/components/ui/chain-selector";
+import { trackEvent } from "@/components/analytics";
 import dynamic from "next/dynamic";
 
 // Dynamically import network grid 3D animation for performance
@@ -110,13 +111,19 @@ export function Hero() {
               className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
             >
               <Button size="xl" className="gap-2 min-w-[200px] bg-brand-500 hover:bg-brand-600" asChild>
-                <Link href="/dashboard">
+                <Link
+                  href="/dashboard"
+                  onClick={() => trackEvent("cta_click", { location: "hero", button: "get_started_free" })}
+                >
                   Get Started Free
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
               <Button variant="outline" size="xl" className="gap-2 min-w-[200px] border-gray-600 text-white hover:bg-gray-800" asChild>
-                <Link href="/platform">
+                <Link
+                  href="/platform"
+                  onClick={() => trackEvent("cta_click", { location: "hero", button: "watch_demo" })}
+                >
                   <Play className="h-5 w-5" />
                   Watch Demo
                 </Link>

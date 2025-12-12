@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 import { ArrowRight, Brain, Check, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { trackEvent } from "@/components/analytics";
 
 const benefits = [
   "Company-specific AI trained on your data",
@@ -63,13 +64,23 @@ export function DashboardHero() {
             {/* CTAs */}
             <div className="mt-10 flex flex-col sm:flex-row items-start gap-4">
               <Button size="xl" variant="gradient" className="gap-2" asChild>
-                <a href="http://localhost:3001" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="http://localhost:3001"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackEvent("cta_click", { location: "dashboard_hero", button: "start_free_trial" })}
+                >
                   Start Free Trial
                   <ArrowRight className="h-5 w-5" />
                 </a>
               </Button>
               <Button size="xl" variant="outline" asChild>
-                <Link href="/contact">Talk to Sales</Link>
+                <Link
+                  href="/contact"
+                  onClick={() => trackEvent("cta_click", { location: "dashboard_hero", button: "talk_to_sales" })}
+                >
+                  Talk to Sales
+                </Link>
               </Button>
             </div>
 

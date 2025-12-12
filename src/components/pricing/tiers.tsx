@@ -10,6 +10,7 @@ import {
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { trackEvent } from "@/components/analytics";
 
 interface PricingTier {
   name: string;
@@ -189,12 +190,20 @@ export function PricingTiers() {
                 asChild
               >
                 {tier.cta === "Contact Sales" ? (
-                  <Link href={tier.href}>
+                  <Link
+                    href={tier.href}
+                    onClick={() => trackEvent("pricing_cta_click", { tier: tier.name.toLowerCase().replace(" ", "_"), button: "contact_sales" })}
+                  >
                     {tier.cta}
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 ) : (
-                  <a href={tier.href} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={tier.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackEvent("pricing_cta_click", { tier: tier.name.toLowerCase().replace(" ", "_"), button: "start_free_trial" })}
+                  >
                     {tier.cta}
                     <ArrowRight className="h-4 w-4" />
                   </a>

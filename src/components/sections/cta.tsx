@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { trackEvent } from "@/components/analytics";
 
 export function CTA() {
   return (
@@ -43,13 +44,21 @@ export function CTA() {
           {/* CTAs */}
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="xl" variant="gradient" className="gap-2 min-w-[200px]" asChild>
-              <Link href="/dashboard">
+              <Link
+                href="/dashboard"
+                onClick={() => trackEvent("cta_click", { location: "cta_section", button: "get_started_free" })}
+              >
                 Get Started Free
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </Button>
             <Button variant="outline" size="xl" className="min-w-[200px]" asChild>
-              <Link href="/contact">Talk to Sales</Link>
+              <Link
+                href="/contact"
+                onClick={() => trackEvent("cta_click", { location: "cta_section", button: "talk_to_sales" })}
+              >
+                Talk to Sales
+              </Link>
             </Button>
           </div>
 

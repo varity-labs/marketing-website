@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { ChainSelector } from "@/components/ui/chain-selector";
 import { ComingSoonLink } from "@/components/ui/coming-soon-link";
 import { cn } from "@/lib/utils";
+import { trackEvent } from "@/components/analytics";
 
 interface NavItem {
   label: string;
@@ -78,10 +79,18 @@ export function Header() {
 
               <div className="hidden md:flex items-center gap-2">
                 <Button variant="ghost" size="sm" asChild>
-                  <Link href="/contact">Contact</Link>
+                  <Link
+                    href="/contact"
+                    onClick={() => trackEvent("nav_cta_click", { location: "header_desktop", button: "contact" })}
+                  >
+                    Contact
+                  </Link>
                 </Button>
                 <Button size="sm" className="gap-1" asChild>
-                  <Link href="/dashboard">
+                  <Link
+                    href="/dashboard"
+                    onClick={() => trackEvent("nav_cta_click", { location: "header_desktop", button: "get_started" })}
+                  >
                     Get Started
                     <ArrowRight className="h-4 w-4" />
                   </Link>
@@ -140,10 +149,24 @@ export function Header() {
 
                 <div className="flex flex-col gap-3 pt-4">
                   <Button variant="outline" size="lg" asChild>
-                    <Link href="/contact">Contact Sales</Link>
+                    <Link
+                      href="/contact"
+                      onClick={() => {
+                        trackEvent("nav_cta_click", { location: "header_mobile", button: "contact_sales" });
+                        setIsMobileMenuOpen(false);
+                      }}
+                    >
+                      Contact Sales
+                    </Link>
                   </Button>
                   <Button size="lg" className="gap-2" asChild>
-                    <Link href="/dashboard">
+                    <Link
+                      href="/dashboard"
+                      onClick={() => {
+                        trackEvent("nav_cta_click", { location: "header_mobile", button: "get_started" });
+                        setIsMobileMenuOpen(false);
+                      }}
+                    >
                       Get Started
                       <ArrowRight className="h-5 w-5" />
                     </Link>
