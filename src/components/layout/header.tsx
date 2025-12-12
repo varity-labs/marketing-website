@@ -74,6 +74,13 @@ export function Header() {
 
             {/* Right Side - CTAs */}
             <div className="flex items-center gap-3">
+              {/* Signup Progress Bar - Shows when scrolled on larger screens */}
+              {isScrolled && (
+                <div className="hidden lg:block">
+                  <SignupProgressBar variant="minimal" />
+                </div>
+              )}
+
               <div className="hidden sm:block">
                 <ChainSelector />
               </div>
@@ -87,15 +94,18 @@ export function Header() {
                     Contact
                   </Link>
                 </Button>
-                <Button size="sm" className="gap-1" asChild>
-                  <Link
-                    href="/dashboard"
-                    onClick={() => trackEvent("nav_cta_click", { location: "header_desktop", button: "get_started" })}
-                  >
-                    Get Started
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </Button>
+                {/* Only show Get Started button when NOT scrolled (progress bar shows when scrolled) */}
+                {!isScrolled && (
+                  <Button size="sm" className="gap-1" asChild>
+                    <Link
+                      href="/dashboard"
+                      onClick={() => trackEvent("nav_cta_click", { location: "header_desktop", button: "get_started" })}
+                    >
+                      Get Started
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </Button>
+                )}
               </div>
 
               {/* Mobile Menu Button */}
@@ -114,27 +124,6 @@ export function Header() {
           </nav>
         </div>
       </header>
-
-      {/* Sticky Conversion Bar - Appears below header when scrolled */}
-      <AnimatePresence>
-        {isScrolled && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="fixed top-[52px] left-0 right-0 z-40 hidden lg:block"
-          >
-            <div className="bg-gradient-to-r from-brand-500/10 via-electric-400/10 to-brand-500/10 border-b border-brand-500/20 backdrop-blur-sm">
-              <div className="section-container py-2.5">
-                <div className="flex items-center justify-center">
-                  <SignupProgressBar variant="minimal" />
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       {/* Mobile Menu */}
       <AnimatePresence>
