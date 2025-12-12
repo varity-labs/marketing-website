@@ -40,7 +40,7 @@ const tiers: PricingTier[] = [
     ],
     highlighted: ["Company-specific AI dashboard"],
     cta: "Start Free Trial",
-    href: "http://localhost:3001",
+    href: "https://app.varity.so",
   },
   {
     name: "Business Pro",
@@ -60,7 +60,7 @@ const tiers: PricingTier[] = [
     highlighted: ["Industry RAG knowledge (10K+ docs)", "Custom integrations"],
     popular: true,
     cta: "Start Free Trial",
-    href: "http://localhost:3001",
+    href: "https://app.varity.so",
   },
   {
     name: "Enterprise",

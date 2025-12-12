@@ -65,7 +65,7 @@ export function DashboardHero() {
             <div className="mt-10 flex flex-col sm:flex-row items-start gap-4">
               <Button size="xl" variant="gradient" className="gap-2" asChild>
                 <a
-                  href="http://localhost:3001"
+                  href="https://app.varity.so"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackEvent("cta_click", { location: "dashboard_hero", button: "start_free_trial" })}
