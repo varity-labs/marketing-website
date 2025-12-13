@@ -108,14 +108,14 @@ export function Solution() {
             className="card p-0 overflow-hidden"
           >
             {/* Table Header */}
-            <div className="grid grid-cols-3 gap-4 p-4 bg-background-secondary border-b border-border">
-              <div className="text-body-sm font-medium text-foreground-muted">
+            <div className="grid grid-cols-3 gap-2 sm:gap-4 p-3 sm:p-4 bg-background-secondary border-b border-border">
+              <div className="text-xs sm:text-body-sm font-medium text-foreground-muted">
                 Feature
               </div>
-              <div className="text-body-sm font-medium text-red-400 text-center">
+              <div className="text-xs sm:text-body-sm font-medium text-red-400 text-center">
                 Traditional Cloud
               </div>
-              <div className="text-body-sm font-medium text-brand-400 text-center">
+              <div className="text-xs sm:text-body-sm font-medium text-brand-400 text-center">
                 Varity
               </div>
             </div>
@@ -129,19 +129,19 @@ export function Solution() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
-                  className="grid grid-cols-3 gap-4 p-4"
+                  className="grid grid-cols-3 gap-2 sm:gap-4 p-3 sm:p-4"
                 >
-                  <div className="text-body-md font-medium text-foreground">
+                  <div className="text-xs sm:text-body-md font-medium text-foreground">
                     {row.feature}
                   </div>
                   <div className={cn(
-                    "text-body-sm text-center py-1 px-2 rounded",
+                    "text-xs sm:text-body-sm text-center py-2 px-2 sm:px-3 rounded",
                     "bg-red-500/10 text-red-400"
                   )}>
                     {row.cloud}
                   </div>
                   <div className={cn(
-                    "text-body-sm text-center py-1 px-2 rounded",
+                    "text-xs sm:text-body-sm text-center py-2 px-2 sm:px-3 rounded",
                     "bg-brand-500/10 text-brand-400"
                   )}>
                     {row.varity}
