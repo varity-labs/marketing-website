@@ -28,7 +28,7 @@ export function Partners() {
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-background via-background-secondary/30 to-background" />
 
-      <div className="relative">
+      <div className="relative overflow-hidden">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -49,7 +49,8 @@ export function Partners() {
           gradientWidth={150}
           speed={40}
           pauseOnHover={true}
-          className="py-4"
+          className="py-4 [&>*]:overflow-hidden"
+          style={{ overflow: 'hidden' }}
         >
           {partners.map((partner, index) => (
             <div

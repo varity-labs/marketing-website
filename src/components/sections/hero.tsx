@@ -48,7 +48,7 @@ const itemVariants = {
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-16 md:pt-20 overflow-hidden">
       {/* Background layers */}
       <div className="absolute inset-0">
         {/* Base gradient */}
@@ -61,7 +61,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
       </div>
         {/* Content */}
-        <div className="section-container relative z-10 py-20 lg:py-32">
+        <div className="section-container relative z-10 py-12 md:py-20 lg:py-32">
           <motion.div
             variants={containerVariants}
             initial="hidden"

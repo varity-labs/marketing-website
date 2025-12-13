@@ -451,6 +451,25 @@ code, pre, kbd, samp {
   scrollbar-color: var(--deep-space-700) var(--background);
 }
 
+/* Hide scrollbar utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar on marquee sections */
+.rfm-marquee-container {
+  overflow: hidden !important;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+.rfm-marquee-container::-webkit-scrollbar {
+  display: none !important;
+}
+
 /* ========================================
    TYPOGRAPHY SCALE
    ======================================== */

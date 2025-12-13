@@ -70,7 +70,7 @@ function StatCard({ stat }: { stat: Stat }) {
       variants={itemVariants}
       className="card card-hover text-center"
     >
-      <div className="text-display-lg md:text-display-xl font-bold text-gradient mb-2">
+      <div className="text-display-sm sm:text-display-md md:text-display-xl font-bold text-gradient mb-2">
         {isInView ? (
           <CountUp
             end={stat.value}
@@ -82,10 +82,10 @@ function StatCard({ stat }: { stat: Stat }) {
           `0${stat.suffix}`
         )}
       </div>
-      <div className="text-heading-md font-semibold text-foreground mb-1">
+      <div className="text-heading-sm sm:text-heading-md font-semibold text-foreground mb-1">
         {stat.label}
       </div>
-      <div className="text-body-sm text-foreground-secondary">
+      <div className="text-caption sm:text-body-sm text-foreground-secondary">
         {stat.description}
       </div>
     </motion.div>
