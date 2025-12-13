@@ -3,11 +3,36 @@ import { Header, Footer } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { ContactForm } from "@/components/contact-form";
 import { Mail, MessageSquare, Building } from "lucide-react";
+import { BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Contact - Varity",
-  description: "Get in touch with the Varity team. We're here to help you build on decentralized infrastructure.",
+  title: "Contact Varity | Sales, Support & Partnerships",
+  description:
+    "Get in touch with the Varity team. Contact us for sales inquiries, technical support, or partnership opportunities. We're here to help you build on decentralized infrastructure.",
+  keywords: [
+    "contact Varity",
+    "Varity support",
+    "Varity sales",
+    "decentralized infrastructure support",
+    "Web3 infrastructure help",
+  ],
+  alternates: {
+    canonical: "https://varity.so/contact/",
+  },
+  openGraph: {
+    title: "Contact Varity | Sales, Support & Partnerships",
+    description:
+      "Get in touch with the Varity team for sales, support, or partnership inquiries.",
+    url: "https://varity.so/contact/",
+    type: "website",
+  },
 };
+
+// Breadcrumb for navigation schema
+const breadcrumbs = [
+  { name: "Home", url: "https://varity.so/" },
+  { name: "Contact", url: "https://varity.so/contact/" },
+];
 
 const contactOptions = [
   {
@@ -36,6 +61,9 @@ const contactOptions = [
 export default function ContactPage() {
   return (
     <>
+      {/* Structured Data for SEO */}
+      <BreadcrumbSchema items={breadcrumbs} />
+
       <Header />
       <main>
         {/* Hero */}

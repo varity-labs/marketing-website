@@ -3,12 +3,37 @@ import Link from "next/link";
 import { Header, Footer } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Target, Sparkles, Globe } from "lucide-react";
+import { BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "About - Varity",
+  title: "About Varity | Our Mission to Decentralize Cloud Infrastructure",
   description:
-    "We're building the Operating System for Web3 - replacing AWS, Google Cloud, and Azure with 100% decentralized infrastructure.",
+    "Varity is building the Operating System for Web3 - replacing AWS, Google Cloud, and Azure with 100% decentralized infrastructure. Learn about our mission, values, and roadmap.",
+  keywords: [
+    "about Varity",
+    "Varity Labs",
+    "decentralized infrastructure company",
+    "Web3 startup",
+    "DePin company",
+    "cloud infrastructure alternative",
+  ],
+  alternates: {
+    canonical: "https://varity.so/about/",
+  },
+  openGraph: {
+    title: "About Varity | Decentralizing Cloud Infrastructure",
+    description:
+      "We're building the Operating System for Web3. Learn about our mission to replace AWS, Google Cloud, and Azure with decentralized infrastructure.",
+    url: "https://varity.so/about/",
+    type: "website",
+  },
 };
+
+// Breadcrumb for navigation schema
+const breadcrumbs = [
+  { name: "Home", url: "https://varity.so/" },
+  { name: "About", url: "https://varity.so/about/" },
+];
 
 const values = [
   {
@@ -44,6 +69,9 @@ const milestones = [
 export default function AboutPage() {
   return (
     <>
+      {/* Structured Data for SEO */}
+      <BreadcrumbSchema items={breadcrumbs} />
+
       <Header />
       <main>
         {/* Hero */}

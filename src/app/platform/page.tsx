@@ -3,12 +3,66 @@ import Link from "next/link";
 import { Header, Footer } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Cpu, Database, Shield, Zap, Globe, Lock, Server, Layers } from "lucide-react";
+import { ServiceSchema, BreadcrumbSchema, VarityEntitySchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Platform - Varity",
+  title: "DePin Infrastructure Platform | Varity Web3 OS",
   description:
-    "The Operating System for Web3. 100% decentralized infrastructure with Akash compute, Filecoin storage, and Arbitrum L3.",
+    "The Operating System for Web3. 100% decentralized infrastructure with Akash Network compute, Filecoin storage, Arbitrum L3 blockchain, and Lit Protocol encryption. Replace AWS, Google Cloud, Azure.",
+  keywords: [
+    "DePin infrastructure",
+    "decentralized cloud platform",
+    "Web3 operating system",
+    "Akash Network",
+    "Filecoin storage",
+    "Arbitrum L3",
+    "Lit Protocol",
+    "decentralized compute",
+    "AWS alternative",
+    "Google Cloud alternative",
+    "Azure alternative",
+  ],
+  alternates: {
+    canonical: "https://varity.so/platform/",
+  },
+  openGraph: {
+    title: "DePin Infrastructure Platform | Varity",
+    description:
+      "100% decentralized infrastructure. Akash compute, Filecoin storage, Arbitrum L3 blockchain. 89% savings vs traditional cloud.",
+    url: "https://varity.so/platform/",
+    type: "website",
+  },
 };
+
+// Services for schema
+const platformServices = [
+  {
+    name: "Akash Network Compute",
+    description:
+      "Decentralized compute marketplace with 10,000+ global providers, auto-scaling, and GPU support. 64-80% cost savings vs AWS EC2.",
+  },
+  {
+    name: "Filecoin Storage",
+    description:
+      "Permanent decentralized storage with IPFS integration, content addressing, verifiable proofs, and 3x redundancy.",
+  },
+  {
+    name: "Arbitrum L3 Blockchain",
+    description:
+      "Custom blockchain layer built on Arbitrum for smart contract execution with Ethereum security, low gas fees, and fast finality.",
+  },
+  {
+    name: "Lit Protocol Encryption",
+    description:
+      "Wallet-based encryption and access control with decentralized keys, conditional access, and no master keys.",
+  },
+];
+
+// Breadcrumb for navigation schema
+const breadcrumbs = [
+  { name: "Home", url: "https://varity.so/" },
+  { name: "Platform", url: "https://varity.so/platform/" },
+];
 
 const infrastructure = [
   {
@@ -49,6 +103,11 @@ const benefits = [
 export default function PlatformPage() {
   return (
     <>
+      {/* Structured Data for SEO */}
+      <ServiceSchema services={platformServices} />
+      <BreadcrumbSchema items={breadcrumbs} />
+      <VarityEntitySchema />
+
       <Header />
       <main>
         {/* Hero */}
