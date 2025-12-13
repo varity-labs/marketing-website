@@ -48,7 +48,7 @@ export function Solution() {
     <section className="section-padding relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-brand-500/5 to-background" />
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-brand-500/10 rounded-full blur-3xl opacity-50" />
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[300px] md:w-[450px] lg:w-[600px] h-[300px] md:h-[450px] lg:h-[600px] bg-brand-500/10 rounded-full blur-3xl opacity-50" />
 
       <div className="section-container relative">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">

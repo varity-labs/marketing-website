@@ -65,7 +65,7 @@ export function AIDashboard() {
                 </div>
                 <div className="flex-1 flex items-center justify-center">
                   <div className="px-4 py-1 rounded-md bg-background-secondary text-xs text-foreground-muted">
-                    dashboard.varity.xyz
+                    app.varity.so
                   </div>
                 </div>
               </div>
@@ -85,7 +85,7 @@ export function AIDashboard() {
                 </div>
 
                 {/* Stats Grid with Realistic Data */}
-                <div className="grid grid-cols-3 gap-4 mb-6">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-6">
                   {[
                     { label: "Monthly Revenue", value: "$842K", change: "+18.3%", trend: "up" },
                     { label: "Active Customers", value: "12,847", change: "+24.1%", trend: "up" },

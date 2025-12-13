@@ -12,8 +12,8 @@ export function CTA() {
     <section className="section-padding relative overflow-hidden">
       {/* Background gradients */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background-secondary to-background" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-500/10 rounded-full blur-3xl" />
-      <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-electric-400/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[600px] lg:w-[800px] h-[400px] md:h-[600px] lg:h-[800px] bg-brand-500/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[450px] lg:w-[600px] h-[300px] md:h-[450px] lg:h-[600px] bg-electric-400/10 rounded-full blur-3xl" />
 
       <div className="section-container relative">
         <motion.div

@@ -99,8 +99,8 @@ export function Hero() {
 
             {/* Chain Selector */}
             <motion.div variants={itemVariants} className="mt-8 flex justify-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-900/80 border border-gray-700 backdrop-blur-sm">
-                <span className="text-sm text-gray-300">Choose your blockchain:</span>
+              <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg bg-gray-900/80 border border-gray-700 backdrop-blur-sm">
+                <span className="hidden sm:inline text-sm text-gray-300">Choose your blockchain:</span>
                 <ChainSelector />
               </div>
             </motion.div>

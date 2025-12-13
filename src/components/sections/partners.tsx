@@ -58,7 +58,7 @@ export function Partners() {
             >
               <div className="group relative cursor-default">
                 {/* Partner Name - Much Larger Text */}
-                <span className="text-3xl lg:text-4xl font-bold text-foreground-muted/70 hover:text-foreground transition-all duration-300 group-hover:scale-110 inline-block">
+                <span className="text-xl md:text-2xl lg:text-4xl font-bold text-foreground-muted/70 hover:text-foreground transition-all duration-300 group-hover:scale-110 inline-block">
                   {partner.name}
                 </span>
 
@@ -74,7 +74,7 @@ export function Partners() {
               className="mx-8 lg:mx-12 flex items-center justify-center"
             >
               <div className="group relative cursor-default">
-                <span className="text-3xl lg:text-4xl font-bold text-foreground-muted/70 hover:text-foreground transition-all duration-300 group-hover:scale-110 inline-block">
+                <span className="text-xl md:text-2xl lg:text-4xl font-bold text-foreground-muted/70 hover:text-foreground transition-all duration-300 group-hover:scale-110 inline-block">
                   {partner.name}
                 </span>
                 <div className="absolute -inset-6 bg-gradient-to-r from-brand-500/20 to-electric-400/20 rounded-2xl blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
