@@ -28,11 +28,11 @@ All copywriting is done by editing `.tsx` files in `/src/app/` and `/src/compone
 **Priority:** CRITICAL - Must fix before public launch
 
 **Files to update:**
-- [ ] `/src/app/terms/page.tsx` (line 560)
-- [ ] `/src/app/privacy/page.tsx` (line 277)
+- [x] `/src/app/terms/page.tsx` (line 560) - DONE
+- [x] `/src/app/privacy/page.tsx` (line 277) - DONE
 
-**Current:** `[Address to be added]`
-**Action:** Replace with actual Varity Inc. registered address
+**Address:** `Varity Inc., 1601 N Main St #3159, Jacksonville, FL 32206`
+**Status:** COMPLETED - Update when C Corp is established
 
 ---
 
@@ -288,11 +288,11 @@ git push origin feature/restructuring-iso-dashboard
 | About | Done | Needs date review | Yes |
 | Contact | Done | Done | Yes |
 | Blog | Coming Soon page | Add ETA | Yes |
-| Terms | Done | Needs address | Yes |
-| Privacy | Done | Needs address | Yes |
+| Terms | Done | Done | Yes |
+| Privacy | Done | Done | Yes |
 | Acceptable Use | Done | Verify | Yes |
 
 ---
 
 **Total Estimated Tasks:** ~25 copywriting items
-**Critical Before Launch:** 2 (address placeholders)
+**Critical Before Launch:** 0 (all critical items completed)

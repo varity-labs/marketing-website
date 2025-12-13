@@ -274,7 +274,7 @@ export default function PrivacyPage() {
                 </p>
                 <ul className="list-none text-body-md text-foreground-secondary space-y-2 mb-4">
                   <li><strong>Email:</strong> hello@varity.so</li>
-                  <li><strong>Address:</strong> Varity Inc., [Address to be added]</li>
+                  <li><strong>Address:</strong> Varity Inc., 1601 N Main St #3159, Jacksonville, FL 32206</li>
                   <li><strong>Data Protection Officer:</strong> hello@varity.so</li>
                 </ul>
               </section>

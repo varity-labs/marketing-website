@@ -557,7 +557,7 @@ export default function TermsPage() {
                 <ul className="list-none text-body-md text-foreground-secondary space-y-2 mb-4">
                   <li><strong>Legal Inquiries:</strong> hello@varity.so</li>
                   <li><strong>General Support:</strong> hello@varity.so</li>
-                  <li><strong>Address:</strong> Varity Inc., [Address to be added]</li>
+                  <li><strong>Address:</strong> Varity Inc., 1601 N Main St #3159, Jacksonville, FL 32206</li>
                 </ul>
               </section>
 
