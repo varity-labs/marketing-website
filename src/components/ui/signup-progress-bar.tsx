@@ -51,11 +51,17 @@ export function SignupProgressBar({
 
   const fetchSignupCount = useCallback(async () => {
     try {
-      // Try to fetch from the dashboard backend (Railway)
-      const backendUrl = process.env.NEXT_PUBLIC_DASHBOARD_API_URL || 'https://generic-template-dashboard-production.up.railway.app';
-      const response = await fetch(`${backendUrl}${apiEndpoint}`, {
+      // Fetch from the Railway backend (serves Privy signup stats)
+      // Direct URL to avoid any environment variable issues with static builds
+      const RAILWAY_BACKEND = 'https://generic-template-dashboard-production.up.railway.app';
+      const response = await fetch(`${RAILWAY_BACKEND}${apiEndpoint}`, {
+        method: 'GET',
         mode: 'cors',
-        headers: { 'Accept': 'application/json' },
+        credentials: 'omit',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
       });
 
       if (!response.ok) {
@@ -79,8 +85,8 @@ export function SignupProgressBar({
         lastUpdated: data.lastUpdated ?? new Date().toISOString(),
       });
     } catch (err) {
-      // Silently fail and use defaults - API may not be available
-      console.debug('Signup stats fetch error:', err);
+      // Log error for debugging - helps identify CORS or network issues
+      console.error('Signup stats fetch failed:', err);
       setStats({
         count: 0,
         total: earlyAdopterSpots,
