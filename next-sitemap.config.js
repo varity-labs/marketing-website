@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://varity.xyz',
+  siteUrl: process.env.SITE_URL || 'https://varity.so',
   generateRobotsTxt: true,
   sitemapSize: 7000,
   exclude: ['/admin/*', '/api/*'],
