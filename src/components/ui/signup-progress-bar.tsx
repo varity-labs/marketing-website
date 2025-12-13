@@ -51,8 +51,8 @@ export function SignupProgressBar({
 
   const fetchSignupCount = useCallback(async () => {
     try {
-      // Try to fetch from the dashboard backend
-      const backendUrl = process.env.NEXT_PUBLIC_DASHBOARD_API_URL || 'https://api.varity.so';
+      // Try to fetch from the dashboard backend (Railway)
+      const backendUrl = process.env.NEXT_PUBLIC_DASHBOARD_API_URL || 'https://generic-template-dashboard-production.up.railway.app';
       const response = await fetch(`${backendUrl}${apiEndpoint}`, {
         mode: 'cors',
         headers: { 'Accept': 'application/json' },
