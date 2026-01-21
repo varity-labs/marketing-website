@@ -4,7 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { Logo } from "@/components/ui/logo";
 import { ComingSoonLink } from "@/components/ui/coming-soon-link";
-import { Github, Twitter, Linkedin, Youtube } from "lucide-react";
+import { Github, Twitter, Linkedin, Youtube, ExternalLink } from "lucide-react";
 
 // Custom Discord icon (not in lucide)
 function DiscordIcon({ className }: { className?: string }) {
@@ -41,8 +41,7 @@ const footerSections: FooterSection[] = [
     title: "Product",
     links: [
       { label: "Platform", href: "/platform", active: true },
-      { label: "Dashboard", href: "/dashboard", active: true },
-      { label: "Pricing", href: "/pricing", active: true },
+      { label: "App Store", href: "https://store.varity.so", active: true, external: true },
       { label: "SDK", href: "/sdk" },
       { label: "CLI", href: "/cli" },
       { label: "Marketplace", href: "/marketplace" },
@@ -129,12 +128,24 @@ export function Footer() {
                 {section.links.map((link) => (
                   <li key={link.href}>
                     {link.active ? (
-                      <Link
-                        href={link.href}
-                        className="text-sm text-foreground-secondary hover:text-foreground transition-colors"
-                      >
-                        {link.label}
-                      </Link>
+                      link.external ? (
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-foreground-secondary hover:text-foreground transition-colors inline-flex items-center gap-1"
+                        >
+                          {link.label}
+                          <ExternalLink className="h-3 w-3" />
+                        </a>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          className="text-sm text-foreground-secondary hover:text-foreground transition-colors"
+                        >
+                          {link.label}
+                        </Link>
+                      )
                     ) : (
                       <ComingSoonLink className="text-sm">
                         {link.label}

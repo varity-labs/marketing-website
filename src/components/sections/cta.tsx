@@ -44,13 +44,15 @@ export function CTA() {
           {/* CTAs */}
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="xl" variant="gradient" className="gap-2 min-w-[200px]" asChild>
-              <Link
-                href="/dashboard"
-                onClick={() => trackEvent("cta_click", { location: "cta_section", button: "get_started_free" })}
+              <a
+                href="https://store.varity.so"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackEvent("cta_click", { location: "cta_section", button: "explore_apps" })}
               >
-                Get Started Free
+                Explore Apps
                 <ArrowRight className="h-5 w-5" />
-              </Link>
+              </a>
             </Button>
             <Button variant="outline" size="xl" className="min-w-[200px]" asChild>
               <Link

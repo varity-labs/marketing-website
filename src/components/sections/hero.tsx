@@ -111,21 +111,23 @@ export function Hero() {
               className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
             >
               <Button size="xl" className="gap-2 min-w-[200px] bg-brand-500 hover:bg-brand-600" asChild>
-                <Link
-                  href="/dashboard"
-                  onClick={() => trackEvent("cta_click", { location: "hero", button: "get_started_free" })}
+                <a
+                  href="https://store.varity.so"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackEvent("cta_click", { location: "hero", button: "explore_apps" })}
                 >
-                  Get Started Free
+                  Explore Apps
                   <ArrowRight className="h-5 w-5" />
-                </Link>
+                </a>
               </Button>
               <Button variant="outline" size="xl" className="gap-2 min-w-[200px] border-gray-600 text-white hover:bg-gray-800" asChild>
                 <Link
                   href="/platform"
-                  onClick={() => trackEvent("cta_click", { location: "hero", button: "watch_demo" })}
+                  onClick={() => trackEvent("cta_click", { location: "hero", button: "see_how_it_works" })}
                 >
                   <Play className="h-5 w-5" />
-                  Watch Demo
+                  See How It Works
                 </Link>
               </Button>
             </motion.div>

@@ -174,10 +174,14 @@ export default function AboutPage() {
               </p>
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button size="lg" variant="gradient" className="gap-2" asChild>
-                  <Link href="/dashboard">
-                    Get Started Free
+                  <a
+                    href="https://store.varity.so"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Explore Apps
                     <ArrowRight className="h-5 w-5" />
-                  </Link>
+                  </a>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
                   <Link href="/contact">Contact Us</Link>

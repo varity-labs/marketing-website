@@ -126,10 +126,14 @@ export default function PlatformPage() {
               </p>
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button size="xl" variant="gradient" className="gap-2" asChild>
-                  <Link href="/dashboard">
-                    Get Started Free
+                  <a
+                    href="https://store.varity.so"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Explore Apps
                     <ArrowRight className="h-5 w-5" />
-                  </Link>
+                  </a>
                 </Button>
                 <Button size="xl" variant="outline" asChild>
                   <Link href="/contact">Talk to Sales</Link>

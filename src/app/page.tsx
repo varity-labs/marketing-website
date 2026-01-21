@@ -7,10 +7,8 @@ import {
   Solution,
   HowItWorks,
   Features,
-  AIDashboard,
   Security,
   Partners,
-  PricingPreview,
   CTA,
 } from "@/components/sections";
 
@@ -72,10 +70,8 @@ export default function HomePage() {
         <Solution />
         <HowItWorks />
         <Features />
-        <AIDashboard />
         <Security />
         <Partners />
-        <PricingPreview />
         <CTA />
       </main>
       <Footer />

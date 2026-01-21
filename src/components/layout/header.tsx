@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, ExternalLink } from "lucide-react";
 import { Logo } from "@/components/ui/logo";
 import { Button } from "@/components/ui/button";
 import { ChainSelector } from "@/components/ui/chain-selector";
@@ -17,12 +17,12 @@ interface NavItem {
   href: string;
   active?: boolean;
   comingSoon?: boolean;
+  external?: boolean;
 }
 
 const navigation: NavItem[] = [
   { label: "Platform", href: "/platform", active: true },
-  { label: "Dashboard", href: "/dashboard", active: true },
-  { label: "Pricing", href: "/pricing", active: true },
+  { label: "App Store", href: "https://store.varity.so", active: true, external: true },
   { label: "Developers", href: "/developers", comingSoon: true },
   { label: "About", href: "/about", active: true },
 ];
@@ -60,6 +60,17 @@ export function Header() {
                   <ComingSoonLink key={item.href} className="px-4 py-2">
                     <span className="text-sm font-medium">{item.label}</span>
                   </ComingSoonLink>
+                ) : item.external ? (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 text-sm font-medium text-foreground-secondary hover:text-foreground transition-colors inline-flex items-center gap-1"
+                  >
+                    {item.label}
+                    <ExternalLink className="h-3 w-3" />
+                  </a>
                 ) : (
                   <Link
                     key={item.href}
@@ -94,16 +105,18 @@ export function Header() {
                     Contact
                   </Link>
                 </Button>
-                {/* Only show Get Started button when NOT scrolled (progress bar shows when scrolled) */}
+                {/* Only show Explore Apps button when NOT scrolled (progress bar shows when scrolled) */}
                 {!isScrolled && (
                   <Button size="sm" className="gap-1" asChild>
-                    <Link
-                      href="/dashboard"
-                      onClick={() => trackEvent("nav_cta_click", { location: "header_desktop", button: "get_started" })}
+                    <a
+                      href="https://store.varity.so"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => trackEvent("nav_cta_click", { location: "header_desktop", button: "explore_apps" })}
                     >
-                      Get Started
+                      Explore Apps
                       <ArrowRight className="h-4 w-4" />
-                    </Link>
+                    </a>
                   </Button>
                 )}
               </div>
@@ -142,6 +155,18 @@ export function Header() {
                     <ComingSoonLink key={item.href} className="py-3 text-lg">
                       <span className="font-medium">{item.label}</span>
                     </ComingSoonLink>
+                  ) : item.external ? (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="py-3 text-lg font-medium text-foreground-secondary hover:text-foreground transition-colors inline-flex items-center gap-2"
+                    >
+                      {item.label}
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
                   ) : (
                     <Link
                       key={item.href}
@@ -176,16 +201,18 @@ export function Header() {
                     </Link>
                   </Button>
                   <Button size="lg" className="gap-2" asChild>
-                    <Link
-                      href="/dashboard"
+                    <a
+                      href="https://store.varity.so"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       onClick={() => {
-                        trackEvent("nav_cta_click", { location: "header_mobile", button: "get_started" });
+                        trackEvent("nav_cta_click", { location: "header_mobile", button: "explore_apps" });
                         setIsMobileMenuOpen(false);
                       }}
                     >
-                      Get Started
+                      Explore Apps
                       <ArrowRight className="h-5 w-5" />
-                    </Link>
+                    </a>
                   </Button>
                 </div>
               </nav>

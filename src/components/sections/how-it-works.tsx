@@ -8,7 +8,6 @@ import {
   Rocket,
   ArrowRight,
 } from "lucide-react";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -179,10 +178,14 @@ export function HowItWorks() {
           className="mt-16 text-center"
         >
           <Button size="xl" variant="gradient" className="gap-2" asChild>
-            <Link href="/dashboard">
-              Start Building Now
+            <a
+              href="https://store.varity.so"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Explore Apps
               <ArrowRight className="h-5 w-5" />
-            </Link>
+            </a>
           </Button>
           <p className="mt-4 text-sm text-foreground-muted">
             Free to start. No credit card required.
