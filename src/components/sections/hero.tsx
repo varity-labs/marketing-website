@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ChainSelector } from "@/components/ui/chain-selector";
+// import { ChainSelector } from "@/components/ui/chain-selector"; // Commented out - will show multi-chain differently
 import { trackEvent } from "@/components/analytics";
 import dynamic from "next/dynamic";
 
@@ -97,13 +97,13 @@ export function Hero() {
               <span className="text-brand-400 font-medium">Keep 100% control</span>.
             </motion.p>
 
-            {/* Chain Selector */}
-            <motion.div variants={itemVariants} className="mt-8 flex justify-center">
+            {/* Chain Selector - Commented out for now, will show multi-chain capability differently */}
+            {/* <motion.div variants={itemVariants} className="mt-8 flex justify-center">
               <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg bg-gray-900/80 border border-gray-700 backdrop-blur-sm">
                 <span className="hidden sm:inline text-sm text-gray-300">Choose your blockchain:</span>
                 <ChainSelector />
               </div>
-            </motion.div>
+            </motion.div> */}
 
             {/* CTAs */}
             <motion.div
