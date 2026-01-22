@@ -41,10 +41,10 @@ const footerSections: FooterSection[] = [
     title: "Product",
     links: [
       { label: "Platform", href: "/platform", active: true },
+      { label: "Why Varity", href: "/why-varity", active: true },
+      { label: "Solutions", href: "/solutions", active: true },
       { label: "App Store", href: "https://store.varity.so", active: true, external: true },
-      { label: "SDK", href: "/sdk" },
-      { label: "CLI", href: "/cli" },
-      { label: "Marketplace", href: "/marketplace" },
+      { label: "Security", href: "/security" },
     ],
   },
   {

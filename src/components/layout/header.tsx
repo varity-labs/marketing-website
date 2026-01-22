@@ -6,9 +6,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, ArrowRight, ExternalLink } from "lucide-react";
 import { Logo } from "@/components/ui/logo";
 import { Button } from "@/components/ui/button";
-import { ChainSelector } from "@/components/ui/chain-selector";
 import { ComingSoonLink } from "@/components/ui/coming-soon-link";
-import { SignupProgressBar } from "@/components/ui/signup-progress-bar";
 import { cn } from "@/lib/utils";
 import { trackEvent } from "@/components/analytics";
 
@@ -22,7 +20,8 @@ interface NavItem {
 
 const navigation: NavItem[] = [
   { label: "Platform", href: "/platform", active: true },
-  { label: "App Store", href: "https://store.varity.so", active: true, external: true },
+  { label: "Why Varity", href: "/why-varity", active: true },
+  { label: "Solutions", href: "/solutions", active: true },
   { label: "Developers", href: "/developers", comingSoon: true },
   { label: "About", href: "/about", active: true },
 ];
@@ -85,17 +84,6 @@ export function Header() {
 
             {/* Right Side - CTAs */}
             <div className="flex items-center gap-3">
-              {/* Signup Progress Bar - Shows when scrolled on larger screens */}
-              {isScrolled && (
-                <div className="hidden lg:block">
-                  <SignupProgressBar variant="minimal" />
-                </div>
-              )}
-
-              <div className="hidden sm:block">
-                <ChainSelector />
-              </div>
-
               <div className="hidden md:flex items-center gap-2">
                 <Button variant="ghost" size="sm" asChild>
                   <Link
@@ -105,20 +93,17 @@ export function Header() {
                     Contact
                   </Link>
                 </Button>
-                {/* Only show Explore Apps button when NOT scrolled (progress bar shows when scrolled) */}
-                {!isScrolled && (
-                  <Button size="sm" className="gap-1" asChild>
-                    <a
-                      href="https://store.varity.so"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={() => trackEvent("nav_cta_click", { location: "header_desktop", button: "explore_apps" })}
-                    >
-                      Explore Apps
-                      <ArrowRight className="h-4 w-4" />
-                    </a>
-                  </Button>
-                )}
+                <Button size="sm" className="gap-1" asChild>
+                  <a
+                    href="https://store.varity.so"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackEvent("nav_cta_click", { location: "header_desktop", button: "explore_apps" })}
+                  >
+                    Explore Apps
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                </Button>
               </div>
 
               {/* Mobile Menu Button */}
@@ -179,16 +164,7 @@ export function Header() {
                   )
                 )}
 
-                <div className="pt-4 border-t border-border">
-                  <ChainSelector className="w-full justify-center" />
-                </div>
-
-                {/* Early Adopter Progress Bar in Mobile Menu */}
-                <div className="pt-4">
-                  <SignupProgressBar variant="compact" className="w-full" />
-                </div>
-
-                <div className="flex flex-col gap-3 pt-4">
+                <div className="flex flex-col gap-3 pt-4 border-t border-border mt-4">
                   <Button variant="outline" size="lg" asChild>
                     <Link
                       href="/contact"
