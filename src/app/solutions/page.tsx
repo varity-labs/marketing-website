@@ -7,7 +7,7 @@ import { ArrowRight, Users, Building2, Building, Heart, DollarSign, ShieldCheck 
 export const metadata: Metadata = {
   title: "Solutions for Every Business | Varity Private Cloud",
   description:
-    "From startups to enterprises, Varity provides secure, affordable infrastructure. Small businesses save 89%. Enterprises get compliance + control.",
+    "From startups to enterprises, Varity provides secure, affordable infrastructure. Small businesses save up to 89%. Enterprises get compliance + control.",
   keywords: [
     "cloud solutions for small business",
     "enterprise cloud security",
@@ -36,7 +36,7 @@ const businessSizes = [
     description:
       "Affordable, easy-to-use infrastructure without the complexity or high costs.",
     benefits: [
-      "89% savings vs AWS",
+      "Up to 89% savings vs AWS",
       "Deploy in 60 seconds",
       "No DevOps team needed",
       "Predictable monthly costs",
@@ -77,7 +77,7 @@ const industries = [
   {
     icon: Heart,
     title: "Healthcare",
-    description: "HIPAA-compliant patient data storage and processing",
+    description: "HIPAA-compliant patient data storage and processing for real-world healthcare apps",
     useCases: [
       "Electronic Health Records (EHR)",
       "Telemedicine platforms",
@@ -87,23 +87,23 @@ const industries = [
   },
   {
     icon: DollarSign,
-    title: "Finance",
-    description: "SOC 2 compliant transaction processing and data storage",
+    title: "E-commerce & Finance",
+    description: "Secure transaction processing and customer data for online stores and fintech apps",
     useCases: [
-      "Payment processing",
+      "E-commerce platforms (Shopify alternatives)",
+      "Payment processing apps",
       "Trading platforms",
       "Customer data management",
-      "Compliance reporting",
     ],
   },
   {
     icon: ShieldCheck,
-    title: "SaaS",
-    description: "Privacy-first customer data management and hosting",
+    title: "SaaS & Productivity",
+    description: "Privacy-first hosting for CRM, productivity, and collaboration apps",
     useCases: [
-      "Customer databases",
-      "Application hosting",
-      "File storage",
+      "CRM platforms (Salesforce alternatives)",
+      "Productivity tools (Notion alternatives)",
+      "File storage and sharing",
       "API infrastructure",
     ],
   },
@@ -120,13 +120,13 @@ export default function SolutionsPage() {
           <div className="section-container relative">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-display-lg md:text-display-xl font-display font-bold">
-                Built for Businesses
+                Host Real-World Apps
                 <br />
-                <span className="text-gradient-hero">of All Sizes</span>
+                <span className="text-gradient-hero">On-Chain</span>
               </h1>
               <p className="mt-6 text-body-lg text-foreground-secondary">
-                From startups to Fortune 500s, Varity provides the infrastructure
-                you need without the complexity, high costs, or privacy risks.
+                E-commerce, SaaS, healthcare apps, and more. Migrate from AWS, GCP, or Azure
+                to on-chain hosting with maximum security, privacy, and up to 89% cost savings.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button size="xl" variant="gradient" className="gap-2" asChild>
@@ -202,10 +202,10 @@ export default function SolutionsPage() {
           <div className="section-container">
             <div className="text-center max-w-2xl mx-auto mb-16">
               <h2 className="text-display-md font-display font-bold">
-                Solutions by <span className="text-gradient">Industry</span>
+                Real-World Apps <span className="text-gradient">Hosted On-Chain</span>
               </h2>
               <p className="mt-4 text-body-lg text-foreground-secondary">
-                Compliance-ready infrastructure for regulated industries
+                Not crypto apps. Real businesses, real users, hosted on-chain for maximum security.
               </p>
             </div>
 
@@ -250,7 +250,7 @@ export default function SolutionsPage() {
                 Ready to Get Started?
               </h2>
               <p className="mt-4 text-body-lg text-foreground-secondary max-w-2xl mx-auto">
-                Join businesses that chose privacy, control, and 89% cost savings.
+                Join businesses that chose privacy, control, and up to 89% cost savings.
                 Deploy your first app in 60 seconds.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">

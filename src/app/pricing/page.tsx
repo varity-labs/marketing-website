@@ -22,7 +22,6 @@ export const metadata: Metadata = {
     "decentralized cloud pricing",
     "Web3 infrastructure cost",
     "AWS alternative pricing",
-    "DePin pricing",
     "business intelligence pricing",
   ],
   alternates: {

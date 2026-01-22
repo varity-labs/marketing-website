@@ -8,7 +8,7 @@ import { BreadcrumbSchema } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "About Varity | Our Mission to Decentralize Cloud Infrastructure",
   description:
-    "Varity is building the Operating System for Web3 - replacing AWS, Google Cloud, and Azure with 100% decentralized infrastructure. Learn about our mission, values, and roadmap.",
+    "Varity is building a decentralized cloud platform - replacing AWS, Google Cloud, and Azure with more affordable, private infrastructure. Learn about our mission, values, and roadmap.",
   keywords: [
     "about Varity",
     "Varity Labs",
@@ -38,8 +38,8 @@ const breadcrumbs = [
 const values = [
   {
     icon: Target,
-    title: "Decentralization First",
-    description: "We believe infrastructure should be owned by communities, not corporations. Every technical decision prioritizes decentralization.",
+    title: "Aggregation, Not Reinvention",
+    description: "We don't build infrastructure from scratch. We aggregate the best crypto projects (Akash, Filecoin, Arbitrum, Lit) into one unified platform.",
   },
   {
     icon: Users,
@@ -48,13 +48,13 @@ const values = [
   },
   {
     icon: Sparkles,
-    title: "Simplicity Over Complexity",
-    description: "Web3 shouldn't require a PhD. We abstract away blockchain complexity so anyone can build on decentralized infrastructure.",
+    title: "Real-World Apps On-Chain",
+    description: "Not crypto apps. E-commerce, SaaS, healthcare platforms hosted on-chain with zero-crypto UX for end users.",
   },
   {
     icon: Globe,
     title: "Open Source",
-    description: "Our core infrastructure is open source. We believe transparency builds trust and enables innovation.",
+    description: "All our packages are MIT licensed and open source. We believe transparency builds trust and enables innovation.",
   },
 ];
 
@@ -80,14 +80,14 @@ export default function AboutPage() {
           <div className="section-container relative">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-display-lg md:text-display-xl font-display font-bold">
-                Building the future of
+                Building the
                 <br />
-                <span className="text-purple-400">decentralized infrastructure</span>
+                <span className="text-purple-400">Operating System for Web3</span>
               </h1>
               <p className="mt-6 text-body-lg text-foreground-secondary max-w-2xl mx-auto">
-                We&apos;re on a mission to make decentralized infrastructure accessible
-                to every business. No blockchain knowledge required. No corporate
-                surveillance. Just better infrastructure.
+                We aggregate the best crypto infrastructure projects so developers
+                and businesses can migrate real-world applications from AWS to on-chain hosting
+                with maximum security, privacy, and up to 89% cost savings.
               </p>
             </div>
           </div>
@@ -107,9 +107,9 @@ export default function AboutPage() {
                   into proprietary systems.
                 </p>
                 <p className="mt-4 text-body-lg text-foreground-secondary">
-                  We&apos;re building the alternative: a complete Web3 operating system
-                  that replaces AWS, Google Cloud, and Azure with 100% decentralized
-                  infrastructure. Same capabilities, 64% cheaper, with privacy
+                  We&apos;re building the alternative: a complete cloud platform
+                  that replaces AWS, Google Cloud, and Azure with decentralized
+                  infrastructure. Same capabilities, up to 89% savings, with privacy
                   guarantees that are mathematically provable.
                 </p>
               </div>

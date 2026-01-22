@@ -45,11 +45,11 @@ const benefits = [
   },
   {
     icon: DollarSign,
-    title: "Save 89% on Infrastructure",
+    title: "Save Up to 89% on Infrastructure",
     description:
-      "Stop paying cloud providers' escalating prices. Same capabilities, 89% less cost.",
+      "Stop paying cloud providers' escalating prices. Same capabilities, up to 89% less cost.",
     benefits: [
-      "89% savings vs AWS/GCP/Azure",
+      "Up to 89% savings vs AWS/GCP/Azure",
       "Predictable pricing",
       "No surprise bills",
       "Pay only for what you use",
@@ -84,7 +84,7 @@ const benefits = [
 const problems = [
   {
     problem: "Cloud costs keep increasing",
-    solution: "Fixed costs, 89% savings",
+    solution: "Predictable costs, up to 89% savings",
   },
   {
     problem: "AWS can see all your data",
@@ -219,7 +219,7 @@ export default function WhyVarityPage() {
           <div className="section-container">
             <div className="card p-12 text-center bg-gradient-to-br from-brand-500/10 to-electric-400/10 border-brand-500/20">
               <h2 className="text-display-md font-display font-bold">
-                Ready to Save 89%?
+                Ready to Save Up to 89%?
               </h2>
               <p className="mt-4 text-body-lg text-foreground-secondary max-w-2xl mx-auto">
                 Join thousands of businesses that switched to private infrastructure.

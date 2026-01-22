@@ -6,29 +6,28 @@ import { ArrowRight, Check, Cpu, Database, Shield, Zap, Globe, Lock, Server, Lay
 import { ServiceSchema, BreadcrumbSchema, VarityEntitySchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "DePin Infrastructure Platform | Varity Web3 OS",
+  title: "Private Cloud Platform | Varity",
   description:
-    "The Operating System for Web3. 100% decentralized infrastructure with Akash Network compute, Filecoin storage, Arbitrum L3 blockchain, and Lit Protocol encryption. Replace AWS, Google Cloud, Azure.",
+    "Enterprise cloud infrastructure with maximum privacy. Run your apps and data on a fully decentralized platform that no single company controls. 89% cheaper than AWS, Google Cloud, or Azure.",
   keywords: [
-    "DePin infrastructure",
-    "decentralized cloud platform",
-    "Web3 operating system",
-    "Akash Network",
-    "Filecoin storage",
-    "Arbitrum L3",
-    "Lit Protocol",
-    "decentralized compute",
+    "private cloud platform",
+    "secure cloud hosting",
+    "privacy-focused cloud",
+    "decentralized cloud",
     "AWS alternative",
     "Google Cloud alternative",
     "Azure alternative",
+    "enterprise cloud",
+    "data privacy",
+    "cloud cost savings",
   ],
   alternates: {
     canonical: "https://varity.so/platform/",
   },
   openGraph: {
-    title: "DePin Infrastructure Platform | Varity",
+    title: "Private Cloud Platform | Varity",
     description:
-      "100% decentralized infrastructure. Akash compute, Filecoin storage, Arbitrum L3 blockchain. 89% savings vs traditional cloud.",
+      "Enterprise cloud infrastructure with maximum privacy. 89% cheaper than AWS with no single point of control.",
     url: "https://varity.so/platform/",
     type: "website",
   },
@@ -37,24 +36,24 @@ export const metadata: Metadata = {
 // Services for schema
 const platformServices = [
   {
-    name: "Akash Network Compute",
+    name: "Cloud Compute",
     description:
-      "Decentralized compute marketplace with 10,000+ global providers, auto-scaling, and GPU support. 64-80% cost savings vs AWS EC2.",
+      "Scalable computing power from a global network of providers with auto-scaling and GPU support. Up to 89% cost savings vs AWS EC2.",
   },
   {
-    name: "Filecoin Storage",
+    name: "Cloud Storage",
     description:
-      "Permanent decentralized storage with IPFS integration, content addressing, verifiable proofs, and 3x redundancy.",
+      "Permanent, redundant storage with automatic backups and verifiable proofs. Your data is distributed across multiple locations.",
   },
   {
-    name: "Arbitrum L3 Blockchain",
+    name: "Payment Infrastructure",
     description:
-      "Custom blockchain layer built on Arbitrum for smart contract execution with Ethereum security, low gas fees, and fast finality.",
+      "Secure payment processing and smart contract execution with enterprise-grade security and low transaction fees.",
   },
   {
-    name: "Lit Protocol Encryption",
+    name: "Data Encryption",
     description:
-      "Wallet-based encryption and access control with decentralized keys, conditional access, and no master keys.",
+      "Military-grade encryption and access control. Your data is encrypted with keys that only you control—no master keys exist.",
   },
 ];
 
@@ -68,7 +67,7 @@ const infrastructure = [
   {
     icon: Cpu,
     title: "Akash Network Compute",
-    description: "Decentralized compute marketplace with 64-80% cost savings vs AWS",
+    description: "Decentralized compute marketplace with up to 89% cost savings vs AWS",
     features: ["10,000+ global providers", "Auto-scaling", "GPU support"],
   },
   {
@@ -92,7 +91,7 @@ const infrastructure = [
 ];
 
 const benefits = [
-  "89% total savings including AI capabilities vs GCP",
+  "Up to 89% total savings including AI capabilities vs GCP",
   "100% decentralized - no corporate servers",
   "5-layer military-grade privacy",
   "No vendor lock-in",
@@ -121,8 +120,9 @@ export default function PlatformPage() {
                 <span className="text-gradient-hero">for Web3</span>
               </h1>
               <p className="mt-6 text-body-lg text-foreground-secondary">
-                Replace AWS, Google Cloud, and Azure with 100% decentralized
-                infrastructure. Same capabilities, 89% cheaper including AI, provably private.
+                We aggregate the best crypto infrastructure projects (Akash, Filecoin, Arbitrum, Lit Protocol)
+                so you can build and migrate real-world applications to on-chain hosting.
+                Same capabilities as AWS, up to 89% cheaper, with maximum privacy.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button size="xl" variant="gradient" className="gap-2" asChild>
@@ -148,10 +148,10 @@ export default function PlatformPage() {
           <div className="section-container">
             <div className="text-center max-w-2xl mx-auto mb-16">
               <h2 className="text-display-md font-display font-bold">
-                <span className="text-gradient">DePin Infrastructure</span>
+                <span className="text-gradient">Aggregated Infrastructure</span>
               </h2>
               <p className="mt-4 text-body-lg text-foreground-secondary">
-                Built on battle-tested decentralized protocols
+                We orchestrate the best crypto infrastructure projects so you don't have to
               </p>
             </div>
 
@@ -212,13 +212,13 @@ export default function PlatformPage() {
                       <span className="text-red-400 font-bold">$2,800/mo</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-foreground-secondary">Varity DePin</span>
+                      <span className="text-foreground-secondary">Varity (On-Chain)</span>
                       <span className="text-brand-400 font-bold">$299/mo</span>
                     </div>
                     <div className="pt-4 border-t border-border">
                       <div className="flex items-center justify-between">
                         <span className="text-foreground font-medium">Your Savings</span>
-                        <span className="text-brand-400 font-bold text-xl">89%</span>
+                        <span className="text-brand-400 font-bold text-xl">Up to 89%</span>
                       </div>
                     </div>
                   </div>

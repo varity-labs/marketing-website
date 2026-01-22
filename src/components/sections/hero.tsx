@@ -91,10 +91,10 @@ export function Hero() {
               variants={itemVariants}
               className="mt-6 text-body-lg md:text-body-xl text-gray-200 max-w-2xl mx-auto drop-shadow-lg"
             >
-              <span className="text-purple-400 font-medium">Maximum security and privacy</span>.{" "}
-              <span className="text-electric-400 font-medium">Up to 89% savings</span> vs AWS.{" "}
-              <span className="text-brand-400 font-medium">Deploy on any network</span>.{" "}
-              Keep 100% control.
+              Build real-world apps on-chain with{" "}
+              <span className="text-purple-400 font-medium">maximum security and privacy</span>,{" "}
+              <span className="text-electric-400 font-medium">up to 89% savings</span> vs AWS.{" "}
+              We aggregate the best crypto infrastructure so you don&apos;t have to.
             </motion.p>
 
             {/* Chain Selector - Commented out for now, will show multi-chain capability differently */}

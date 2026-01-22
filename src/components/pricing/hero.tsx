@@ -27,7 +27,7 @@ export function PricingHero() {
 
           <p className="mt-6 text-body-lg md:text-body-xl text-foreground-secondary">
             Start free, scale as you grow. Save{" "}
-            <span className="text-brand-400 font-medium">64-80%</span> compared
+            <span className="text-brand-400 font-medium">up to 89%</span> compared
             to traditional cloud providers.
           </p>
 
