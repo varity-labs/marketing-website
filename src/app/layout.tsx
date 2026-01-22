@@ -14,11 +14,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://varity.so"),
   title: {
-    default: "Varity - The Operating System for Web3",
+    default: "Varity - Secure Cloud Infrastructure That Can't See Your Data | Up to 89% Savings vs AWS",
     template: "%s | Varity",
   },
   description:
-    "Build on 100% decentralized infrastructure with 89% total savings including AI. Company-specific AI dashboards, blockchain settlement, and military-grade privacy.",
+    "Infrastructure designed for maximum security and privacy. Your cloud provider can't access your data. Deploy in 60 seconds with up to 89% savings vs AWS. No vendor lock-in.",
   keywords: [
     "Web3",
     "DePin",

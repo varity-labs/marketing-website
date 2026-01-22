@@ -15,8 +15,8 @@ const stats: Stat[] = [
   {
     value: 89,
     suffix: "%",
-    label: "Total Savings",
-    description: "Including AI capabilities vs. GCP",
+    label: "Up to 89% Savings",
+    description: "vs AWS, Google Cloud, and Azure",
   },
   {
     value: 99.9,

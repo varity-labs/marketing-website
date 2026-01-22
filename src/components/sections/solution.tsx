@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 
 const benefits = [
   "100% decentralized infrastructure",
-  "64-80% cost savings vs cloud",
+  "Up to 89% total savings vs cloud",
   "5-layer military-grade privacy",
   "No corporate surveillance",
   "No vendor lock-in",
@@ -34,7 +34,7 @@ const comparison = [
   {
     feature: "Cost Model",
     cloud: "Escalating pricing",
-    varity: "64% cheaper",
+    varity: "Up to 89% cheaper",
   },
   {
     feature: "Lock-in",
@@ -65,14 +65,14 @@ export function Solution() {
             </div>
 
             <h2 className="text-display-md md:text-display-lg font-display font-bold">
-              Varity: The Operating
+              The Cloud Platform
               <br />
-              <span className="text-gradient-hero">System for Web3</span>
+              <span className="text-gradient-hero">Built for Privacy</span>
             </h2>
 
             <p className="mt-6 text-body-lg text-foreground-secondary">
               Replace AWS, Google Cloud, and Azure with 100% decentralized
-              infrastructure. Same capabilities, 64% cheaper, with privacy
+              infrastructure. Same capabilities, up to 89% cheaper, with privacy
               guarantees that are mathematically provable.
             </p>
 

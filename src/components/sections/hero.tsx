@@ -72,7 +72,7 @@ export function Hero() {
             <motion.div variants={itemVariants}>
               <Badge variant="gradient" className="mb-6 py-1.5 px-4 bg-background/80 backdrop-blur-sm">
                 <Sparkles className="h-3.5 w-3.5 mr-1.5" />
-                Arbitrum L3 Testnet Live
+                Early Access Available
               </Badge>
             </motion.div>
 
@@ -91,10 +91,10 @@ export function Hero() {
               variants={itemVariants}
               className="mt-6 text-body-lg md:text-body-xl text-gray-200 max-w-2xl mx-auto drop-shadow-lg"
             >
-              Run your entire business on infrastructure that respects your privacy.{" "}
-              <span className="text-brand-400 font-medium">Deploy in 60 seconds</span>.{" "}
-              <span className="text-electric-400 font-medium">Save 64%</span>.{" "}
-              <span className="text-brand-400 font-medium">Keep 100% control</span>.
+              <span className="text-purple-400 font-medium">Maximum security and privacy</span>.{" "}
+              <span className="text-electric-400 font-medium">Up to 89% savings</span> vs AWS.{" "}
+              <span className="text-brand-400 font-medium">Deploy on any network</span>.{" "}
+              Keep 100% control.
             </motion.p>
 
             {/* Chain Selector - Commented out for now, will show multi-chain capability differently */}
