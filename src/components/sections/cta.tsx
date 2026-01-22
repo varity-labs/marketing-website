@@ -32,13 +32,13 @@ export function CTA() {
           <h2 className="text-display-md md:text-display-lg font-display font-bold">
             Ready to build on
             <br />
-            <span className="text-gradient-hero">decentralized infrastructure?</span>
+            <span className="text-gradient-hero">private infrastructure?</span>
           </h2>
 
           {/* Description */}
           <p className="mt-6 text-body-lg text-foreground-secondary max-w-xl mx-auto">
-            Join the companies replacing AWS, Google Cloud, and Azure with 100%
-            decentralized infrastructure. Start free, scale infinitely.
+            Join companies replacing AWS, Google Cloud, and Azure with secure,
+            private infrastructure. Start free, scale infinitely.
           </p>
 
           {/* CTAs */}

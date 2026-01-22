@@ -35,13 +35,13 @@ const steps: Step[] = [
   {
     number: "02",
     icon: <Settings className="h-6 w-6" />,
-    title: "Deploy to DePin",
+    title: "Deploy Globally",
     description:
-      "One-click deployment to decentralized infrastructure. Your apps run on Akash Network, data stored on Filecoin, secured by Lit Protocol.",
+      "One-click deployment to secure infrastructure worldwide. Your apps run on encrypted servers with automatic backups and redundancy.",
     details: [
       "Zero DevOps required",
       "Automatic scaling",
-      "Multi-region distribution",
+      "Global distribution",
     ],
   },
   {
@@ -101,7 +101,7 @@ export function HowItWorks() {
             <span className="text-gradient">three simple steps</span>
           </h2>
           <p className="mt-4 text-body-lg text-foreground-secondary">
-            No blockchain knowledge required. Deploy your first app in under 5 minutes.
+            No technical knowledge required. Deploy your first app in under 5 minutes.
           </p>
         </motion.div>
 

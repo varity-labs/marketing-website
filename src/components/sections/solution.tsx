@@ -12,34 +12,34 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const benefits = [
-  "100% decentralized infrastructure",
-  "Up to 89% total savings vs cloud",
-  "5-layer military-grade privacy",
-  "No corporate surveillance",
-  "No vendor lock-in",
-  "Self-sovereign data",
+  "Maximum security and privacy protection",
+  "Up to 89% total savings vs AWS/Google/Azure",
+  "Deploy apps globally in seconds",
+  "No corporate access to your data",
+  "No vendor lock-in, open source tools",
+  "You own and control everything",
 ];
 
 const comparison = [
   {
     feature: "Data Access",
-    cloud: "Provider has full access",
-    varity: "Only you can access",
+    cloud: "Provider can see everything",
+    varity: "Only you have access",
   },
   {
     feature: "Infrastructure",
-    cloud: "Centralized servers",
-    varity: "Distributed DePin nodes",
+    cloud: "Corporate data centers",
+    varity: "Servers worldwide",
   },
   {
     feature: "Cost Model",
-    cloud: "Escalating pricing",
+    cloud: "Expensive and rising",
     varity: "Up to 89% cheaper",
   },
   {
-    feature: "Lock-in",
-    cloud: "Proprietary APIs",
-    varity: "Open standards",
+    feature: "Flexibility",
+    cloud: "Locked to one provider",
+    varity: "Deploy anywhere",
   },
 ];
 

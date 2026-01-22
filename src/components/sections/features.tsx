@@ -9,6 +9,7 @@ import {
   Zap,
   Globe,
   Lock,
+  Code,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -21,46 +22,46 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    icon: <Cpu className="h-6 w-6" />,
-    title: "AI-Powered Dashboards",
+    icon: <Shield className="h-6 w-6" />,
+    title: "Maximum Security",
     description:
-      "Company-specific AI trained on your business data. Intelligent automation and insights powered by Akash Network.",
-    gradient: "from-brand-500/20 to-brand-500/5",
+      "Five layers of protection keep your data safe. Military-grade encryption, distributed storage, and secure computing.",
+    gradient: "from-purple-400/20 to-purple-400/5",
   },
   {
     icon: <Database className="h-6 w-6" />,
-    title: "Decentralized Storage",
+    title: "Secure Storage",
     description:
-      "Your data on Filecoin with 3x redundancy. No single point of failure, no corporate access.",
+      "Your data is stored across multiple locations worldwide. If one location fails, your data remains safe and accessible.",
     gradient: "from-electric-400/20 to-electric-400/5",
   },
   {
-    icon: <Shield className="h-6 w-6" />,
-    title: "5-Layer Privacy",
+    icon: <Globe className="h-6 w-6" />,
+    title: "Global Deployment",
     description:
-      "Lit Protocol encryption, distributed storage, decentralized compute, and blockchain settlement.",
-    gradient: "from-purple-400/20 to-purple-400/5",
+      "Deploy your applications to infrastructure worldwide. Choose the regions that work best for your users and compliance needs.",
+    gradient: "from-brand-500/20 to-brand-500/5",
   },
   {
     icon: <Zap className="h-6 w-6" />,
     title: "Instant Deployment",
     description:
-      "One-command deployment to DePin infrastructure. No DevOps required, no blockchain knowledge needed.",
-    gradient: "from-brand-500/20 to-brand-500/5",
-  },
-  {
-    icon: <Globe className="h-6 w-6" />,
-    title: "Multi-Chain Ready",
-    description:
-      "Arbitrum L3 today, with Algorand, zkSync, and Base coming soon. Intelligent chain routing.",
+      "One-click deployment in 60 seconds. No DevOps team needed, no complex configuration required.",
     gradient: "from-electric-400/20 to-electric-400/5",
   },
   {
     icon: <Lock className="h-6 w-6" />,
-    title: "Self-Sovereign Data",
+    title: "You Own Everything",
     description:
-      "Only you control your encryption keys. Not Varity, not cloud providers, not governments.",
+      "Only you control your encryption keys. Not Varity, not cloud providers, not governments. Full data ownership.",
     gradient: "from-purple-400/20 to-purple-400/5",
+  },
+  {
+    icon: <Code className="h-6 w-6" />,
+    title: "Open Source Tools",
+    description:
+      "All packages are MIT licensed and open source. Fork, modify, and contribute freely. No vendor lock-in, ever.",
+    gradient: "from-brand-500/20 to-brand-500/5",
   },
 ];
 

@@ -138,22 +138,18 @@ export function Hero() {
               className="mt-16 pt-8 border-t border-gray-700/50"
             >
               <p className="text-sm text-gray-400 mb-4">
-                Trusted by developers. Powered by decentralized infrastructure.
+                Trusted by developers. Built with open source technology.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-8">
                 {[
-                  { name: "Arbitrum", description: "Secure Layer" },
-                  { name: "Filecoin", description: "Storage" },
-                  { name: "Akash", description: "Compute" },
-                  { name: "Lit Protocol", description: "Encryption" },
-                ].map((partner) => (
-                  <div key={partner.name} className="flex flex-col items-center">
-                    <span className="text-sm font-semibold text-gray-200">
-                      {partner.name}
-                    </span>
-                    <span className="text-xs text-gray-400">
-                      {partner.description}
-                    </span>
+                  { label: "Military-Grade Encryption" },
+                  { label: "Global Infrastructure" },
+                  { label: "Redundant Storage" },
+                  { label: "Open Source" },
+                ].map((feature) => (
+                  <div key={feature.label} className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-brand-500"></div>
+                    <span className="text-xs text-gray-400">{feature.label}</span>
                   </div>
                 ))}
               </div>

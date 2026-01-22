@@ -24,36 +24,36 @@ const layers: Layer[] = [
     icon: <Key className="h-5 w-5" />,
     title: "Layer 1: Encryption at Rest",
     description:
-      "All data encrypted using Lit Protocol before storage. Only your wallet can decrypt.",
-    tech: "Lit Protocol",
+      "All data encrypted before storage. Only you can decrypt it with your private key.",
+    tech: "Military-Grade",
   },
   {
     icon: <Database className="h-5 w-5" />,
-    title: "Layer 2: Distributed Storage",
+    title: "Layer 2: Redundant Storage",
     description:
-      "Data distributed across independent storage providers worldwide. No single point of failure.",
-    tech: "Filecoin / IPFS",
+      "Your data is replicated across multiple secure locations. If one location goes down, your data remains accessible.",
+    tech: "Global",
   },
   {
     icon: <LinkIcon className="h-5 w-5" />,
-    title: "Layer 3: Data Availability",
+    title: "Layer 3: Data Verification",
     description:
-      "AnyTrust DA ensures data availability with ZK proofs for private verification.",
-    tech: "Celestia / AnyTrust",
+      "Every piece of data is cryptographically verified. Ensures your data hasn't been tampered with or corrupted.",
+    tech: "Cryptographic",
   },
   {
     icon: <Server className="h-5 w-5" />,
-    title: "Layer 4: Decentralized Compute",
+    title: "Layer 4: Secure Computing",
     description:
-      "Processing on independent providers. No corporate surveillance, data destroyed after use.",
-    tech: "Akash Network",
+      "Processing happens on independent secure servers. No corporate access to your data. Automatically deleted after processing.",
+    tech: "Isolated",
   },
   {
     icon: <Lock className="h-5 w-5" />,
-    title: "Layer 5: Blockchain Settlement",
+    title: "Layer 5: Immutable Logs",
     description:
-      "All access events logged immutably. Transparent audit trail on Arbitrum + Ethereum.",
-    tech: "Arbitrum L3",
+      "Every data access is permanently logged and cannot be altered. Complete transparency with tamper-proof audit trails.",
+    tech: "Permanent",
   },
 ];
 
